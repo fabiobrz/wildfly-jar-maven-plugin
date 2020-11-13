@@ -14,6 +14,10 @@
     <name>WildFly Bootable JAR - JAX-RS Example</name>
     <description>An example of how to use JAX-RS resources</description>
 
+    <properties>
+        <legacy.patch.cli.script></legacy.patch.cli.script>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
@@ -40,6 +44,7 @@
                     <plugin-options>
                         <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
                     </plugin-options>
+                    <legacy-patch-cli-script>${legacy.patch.cli.script}</legacy-patch-cli-script>
                 </configuration>
                 <executions>
                     <execution>
