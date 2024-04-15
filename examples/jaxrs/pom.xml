@@ -28,10 +28,19 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-jar-maven-plugin</artifactId>
+                <version>9.0.1.Final-redhat-20240325</version>
                 <configuration>
-                    <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+                    <!-- <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location> -->
+                    <feature-packs>
+                      <feature-pack>
+                        <groupId>org.jboss.eap.xp</groupId>
+                        <artifactId>wildfly-galleon-pack</artifactId>
+                        <version>5.0.0.GA-redhat-20240325</version>
+                      </feature-pack>
+                    </feature-packs>
                     <layers>
-                        <layer>jaxrs</layer>
+			<layer>jaxrs</layer>
+			<layer>microprofile-reactive-messaging</layer>
                         <layer>management</layer>
                     </layers>
                     <excluded-layers>

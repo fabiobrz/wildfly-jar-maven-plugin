@@ -10,7 +10,8 @@
     <name>WildFly Bootable JAR - Examples</name>
 
     <properties>
-        <version.bootable.jar>11.0.0.Beta2</version.bootable.jar>
+<!--        <version.bootable.jar>11.0.0.Beta2</version.bootable.jar>-->
+        <version.bootable.jar>9.0.1.Final-redhat-20240325</version.bootable.jar>
         <version.keycloak>18.0.2</version.keycloak>
         <version.wildfly>32.0.0.Beta1</version.wildfly>
         <version.wildfly.datasources.galleon-pack>8.0.0.Beta1</version.wildfly.datasources.galleon-pack>
