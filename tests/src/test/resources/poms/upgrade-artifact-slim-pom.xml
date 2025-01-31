@@ -42,7 +42,7 @@
                     </layers>
                     <plugin-options>
                         <jboss-maven-dist>true</jboss-maven-dist>
-                         <jboss-fork-embedded>true</jboss-fork-embedded>
+                        <jboss-fork-embedded>true</jboss-fork-embedded>
                     </plugin-options>
                     <overridden-server-artifacts>
                         <!-- undertow core -->
@@ -51,6 +51,15 @@
                             <artifactId>undertow-core</artifactId>
                         </artifact>
                     </overridden-server-artifacts>
+                    <cli-sessions>
+                        <cli-session>
+                            <script-files>
+                                <script>jboss-moduls-logger.cli</script>
+                            </script-files>
+                            <!-- We want the env variables to be resolved during server execution -->
+                            <resolve-expressions>false</resolve-expressions>
+                        </cli-session>
+                    </cli-sessions>
                 </configuration>
                 
             </plugin>

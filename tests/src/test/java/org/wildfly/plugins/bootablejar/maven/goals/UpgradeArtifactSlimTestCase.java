@@ -30,7 +30,7 @@ import org.junit.Test;
 public class UpgradeArtifactSlimTestCase extends AbstractBootableJarMojoTestCase {
 
     public UpgradeArtifactSlimTestCase() {
-        super("upgrade-artifact-slim-pom.xml", true, null);
+        super("upgrade-artifact-slim-pom.xml", true, null, "jboss-moduls-logger.cli");
     }
 
     @Test
