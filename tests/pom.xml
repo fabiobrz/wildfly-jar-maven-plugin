@@ -141,7 +141,7 @@
                         <jbossas.dist>${jbossas.dist}</jbossas.dist>
                         <test.groupid.wildfly>${wildfly.groupId}</test.groupid.wildfly>
                         <!-- DevWatch* tests run maven and need to use the same repository -->
-                        <maven.repo.local>${devwatch.maven.repo.local}</maven.repo.local>
+                        <maven.repo.local>/home/hudson/really/sick/of/all/this/stuff</maven.repo.local>
                     </systemPropertyVariables>
                     <argLine>${client.jvm.jpms.args}</argLine>
                 </configuration>
@@ -166,8 +166,6 @@
                                 <test.default.config>${test.default.ee.config}</test.default.config>
                                 <test.default.cloud.config>${test.default.ee.cloud.config}</test.default.cloud.config>
                                 <test.patch.product>${test.patch.ee.product}</test.patch.product>
-                                <!-- DevWatch* tests run maven and need to use the same repository -->
-                                <maven.repo.local>${devwatch.maven.repo.local}</maven.repo.local>
                             </systemPropertyVariables>
                             <includes>
                                 <!-- Other tests would be redundant with wildfly-ee-galleon-pack -->
