@@ -34,6 +34,7 @@
     <properties>
         <test.jvm.args />
         <jbossas.dist>${basedir}/target/wildfly-full</jbossas.dist>
+        <devwatch.maven.repo.local>${settings.localRepository}</devwatch.maven.repo.local>
     </properties>
 
     <dependencies>
@@ -140,7 +141,7 @@
                         <jbossas.dist>${jbossas.dist}</jbossas.dist>
                         <test.groupid.wildfly>${wildfly.groupId}</test.groupid.wildfly>
                         <!-- DevWatch* tests run maven and need to use the same repository -->
-                        <maven.repo.local>${settings.localRepository}</maven.repo.local>
+                        <maven.repo.local>${devwatch.maven.repo.local}</maven.repo.local>
                     </systemPropertyVariables>
                     <argLine>${client.jvm.jpms.args}</argLine>
                 </configuration>
