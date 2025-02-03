@@ -132,6 +132,7 @@
                     release the resource allowing the modules to be deleted for the next test.
                 -->
                 <configuration>
+                    <debugForkedProcess>true</debugForkedProcess>
                     <reuseForks>false</reuseForks>
                     <redirectTestOutputToFile>${surefire.redirect.to.file}</redirectTestOutputToFile>
                     <systemPropertyVariables>
@@ -160,6 +161,7 @@
                         </goals>
                         <phase>test</phase>
                         <configuration>
+                            <debugForkedProcess>true</debugForkedProcess>
                             <systemPropertyVariables>
                                 <test.fpl>${test.ee.fpl}</test.fpl>
                                 <test.health>health</test.health>
@@ -188,6 +190,7 @@
                         </goals>
                         <phase>test</phase>
                         <configuration>
+                            <debugForkedProcess>true</debugForkedProcess>
                             <systemPropertyVariables>
                                 <test.fpl>${test.fpl}</test.fpl>
                                 <test.patch.product>${test.patch.product}</test.patch.product>
