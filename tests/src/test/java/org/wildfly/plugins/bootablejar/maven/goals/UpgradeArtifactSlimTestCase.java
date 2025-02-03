@@ -18,6 +18,7 @@ package org.wildfly.plugins.bootablejar.maven.goals;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.logging.Level;
 
 import org.apache.maven.artifact.Artifact;
 
@@ -43,6 +44,7 @@ public class UpgradeArtifactSlimTestCase extends AbstractBootableJarMojoTestCase
         String undertowVersion =  a.getVersion();
         Assert.assertNotNull(undertowVersion);
         mojo.recordState = true;
+        mojo.enableLog(Level.ALL);
         mojo.execute();
         final Path dir = getTestDir();
         String[] layers = {"jaxrs-server"};
