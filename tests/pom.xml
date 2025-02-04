@@ -151,7 +151,7 @@
                     release the resource allowing the modules to be deleted for the next test.
                 -->
                 <configuration>
-                    <reuseForks>false</reuseForks>
+<!--                    <reuseForks>false</reuseForks>-->
                     <redirectTestOutputToFile>${surefire.redirect.to.file}</redirectTestOutputToFile>
                     <systemPropertyVariables>
                         <test.version.wildfly-ee.upgrade>${test.version.wildfly-ee.upgrade}</test.version.wildfly-ee.upgrade>
